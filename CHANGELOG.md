@@ -1,3 +1,5 @@
-## 0.0.1
+## 0.0.2
+- aar to jar 
 
-* TODO: Describe initial release.
+## 0.0.1 
+- first release

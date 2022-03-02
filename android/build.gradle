@@ -40,6 +40,6 @@ android {
 dependencies {
 //    compileOnly files('libs/SMPWifi-1.0.aar')
 //    implementation name: 'SMPWifi-1.0', ext: 'aar'
-    implementation files('libs/SMPWifi-1.0.aar')
+    implementation files('libs/SMPWifi-1.0.jar')
 }
 
