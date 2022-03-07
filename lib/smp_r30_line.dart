@@ -36,6 +36,10 @@ class SmpR30Line {
     });
   }
 
+  static SmpR30LineData sendText(String text) {
+    return SmpR30LineData("sendText", arguments: {'text': text});
+  }
+
   static SmpR30LineData sendTextLine(String text) {
     return SmpR30LineData("sendTextLine", arguments: {'text': text});
   }

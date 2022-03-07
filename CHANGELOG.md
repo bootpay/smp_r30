@@ -1,3 +1,6 @@
+## 0.0.4
+- sendText function added again
+
 ## 0.0.3
 - sendText function added 
 

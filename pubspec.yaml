@@ -1,6 +1,6 @@
 name: smp_r30
-description: A new flutter plugin project.
-version: 0.0.3
+description: SMP-R30 Pos Printer Plugin For Flutter
+version: 0.0.4
 homepage:
 
 environment:
