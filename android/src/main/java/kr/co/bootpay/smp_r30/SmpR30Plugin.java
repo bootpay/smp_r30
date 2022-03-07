@@ -67,7 +67,8 @@ public class SmpR30Plugin implements FlutterPlugin, MethodCallHandler {
     if(mSyncPrinter != null) return;
 
     mSyncPrinter = new SMPWifi();
-    Log.d("bootpay", "연결시도");
+//    Log.d("bootpay", "연결시도");
+//    Toast.makeText(mAct, "Connected", Toast.LENGTH_SHORT).show();
     mOnConnectionListener = new SMPWifi.OnConnectionListener() {
       @Override
       public void onConnectionSuccess() {
@@ -142,6 +143,8 @@ public class SmpR30Plugin implements FlutterPlugin, MethodCallHandler {
       reset();
     } else if("formatString".equals(command)) {
       formatString(jsonToMap(jsonObject.getJSONObject("arguments")));
+    } else if("sendText".equals(command)) {
+      sendText(jsonToMap(jsonObject.getJSONObject("arguments")));
     } else if("sendTextLine".equals(command)) {
       sendTextLine(jsonToMap(jsonObject.getJSONObject("arguments")));
     } else if("paperCut".equals(command)) {
@@ -181,6 +184,13 @@ public class SmpR30Plugin implements FlutterPlugin, MethodCallHandler {
             arguments.get("height").toLowerCase().equals("true"),
             arguments.get("bold").toLowerCase().equals("true"),
             arguments.get("underline").toLowerCase().equals("true")
+    );
+  }
+
+  private void sendText(Map<String, String> arguments) {
+    Log.d("bootpay", arguments.get("text"));
+    mSyncPrinter.sendText(
+            arguments.get("text")
     );
   }
 
